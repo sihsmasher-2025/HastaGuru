@@ -1,9 +1,8 @@
-# HastaGuru
+# HastaGuru (AI-Powered Bharatanatyam Mudra Recognition Platform) 
 
-**Team Name:** SIHSmashers  
+**Team Name:** SIHSMASHER 
 **Problem Statement ID:** SIH25157  
 **Theme:** Smart Education  
-
 
 ## 📖 About The Project
 
@@ -23,75 +22,92 @@ The platform utilizes **Artificial Intelligence and Computer Vision** to act as 
 * Includes high-quality reference images, Sanskrit meanings, difficulty levels, and therapeutic benefits.
 * **Smart Recommendations:** Suggests similar or related mudras to help users understand subtle differences.
 
-### 3. 🎓 Interactive Learning & Certification (New!)
+### 3. 🎓 Interactive Learning & Testing (New!)
 * **Structured Modules:** Step-by-step practice modules guiding learners from Beginner to Advanced levels.
-* **Test & Certify:** Users can take practical tests to verify their skills. Upon successful completion, the system generates a verifiable **Certificate of Completion**.
+* **Practice & Test Modes:** Dedicated micro-services for learning specific mudras and testing your knowledge without guidance.
+* **Certification:** Users receive a verifiable **Certificate of Completion** upon passing the test modules.
 
 ### 4. 👤 User Dashboard
 * A central hub for tracking daily streaks, "Hours Learnt," and managing profile settings.
 
 ## 🛠️ Tech Stack
 
-This project is built using a robust and scalable technology stack:
+This project relies on a robust set of dependencies to manage the frontend, backend microservices, and AI processing:
 
-* **Frontend:**
-  * **HTML5 & CSS3:** For structure and responsive styling.
-  * **JavaScript:** For interactive UI logic and handling webcam streams.
+* **Frontend:** HTML, CSS, JavaScript
+* **Backend Frameworks:** Flask, FastAPI
+* **Programming Language:** Python
+* **AI & Computer Vision:** OpenCV, MediaPipe
+* **Database:** Firebase
 
-* **Backend & API:**
-  * **Python:** The core logic language.
-  * **Flask / FastAPI:** Used to create high-performance REST APIs to handle model inference requests and serve the application.
+## 📂 Project Structure
 
-* **AI & Computer Vision:**
-  * **MediaPipe:** For efficient, real-time hand landmark detection and skeletal tracking.
-  * **OpenCV:** For image preprocessing (grayscale, resizing, noise reduction) before analysis.
+The application is divided into three distinct modules, each requiring its own server instance:
 
-* **Database:**
-  * **Firebase:** For real-time data storage, user authentication, and managing user progress.
+1.  **Final_Project:** The core application (Landing Page, Dashboard, Main Recognition).
+2.  **mudra_learning:** The dedicated module for guided learning courses.
+3.  **mudra_testing:** The module for user testing and validation.
 
 ## 🚀 Installation & Setup
 
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/your-username/bharatanatyam-ai.git](https://github.com/your-username/bharatanatyam-ai.git)
-    cd bharatanatyam-ai
-    ```
+To run the full platform, you must run **three separate Flask/API servers in parallel** on different ports (5000, 5001, 5002).
 
-2.  **Install Dependencies**
-    ```bash
-    pip install -r requirements.txt
-    ```
+### Prerequisites
+Ensure you have Python installed. Install the required dependencies:
+```bash
+pip install flask fastapi uvicorn opencv-python mediapipe firebase-admin
 
-3.  **Run the Application**
-    ```bash
-    # If using Flask
-    python app.py
-    
-    # If using FastAPI
-    uvicorn main:app --reload
-    ```
+#Step-by-Step Execution Guide
+You will need to open 3 separate Command Prompt (cmd) or Terminal windows.
 
-4.  **Access the App**
-    * Open your browser and go to `http://localhost:5000` (or the port specified in your console).
+###Terminal 1: Run the Main Application
+This starts the main platform (Landing page, Dashboard, etc.).
 
-## 👥 Contributors (Team SIHSmashers)
+Bash
 
+cd Final_Project
+python app.py
+# Runs on localhost:5000
+After running this, copy the localhost link provided in the terminal (usually http://127.0.0.1:5000) and open it in your browser.
+
+###Terminal 2: Run the Learning Module
+This starts the guided learning service required for the "Learn" section.
+
+Bash
+
+cd mudra_learning
+python learning_app.py
+# Runs on localhost:5001
+
+###Terminal 3: Run the Testing Module
+This starts the testing service required for quizzes and certification.
+
+Bash
+
+cd mudra_testing
+python testing_app.py
+# Runs on localhost:5002
+Note: Ensure all three terminals remain open and running while you use the website. If you close any terminal, that specific feature (Main Site, Learning, or Testing) will stop working.
+
+###Step 4: While signing in, you can use sample User ID: sample@gmail.com and password : 11111111
+
+👥 Contributors (Team SIHSMASHER)
 A huge shoutout to the team for their dedication and hard work in bringing this project to life!
 
-* **Riya Shahi** 
-* **Mitanshu Shah** 
-* **Avinash Shinde** 
-* **Nityam Patel** 
-* **Varun Patel** 
-* **Umang Patel** 
+Riya Shahi - riyashahi079@gmail.com
 
-## 🔮 Future Scope
-* **Full Body Posture Correction:** Expanding computer vision to track body alignment (*Adavus*).
-* **Multi-Dance Support:** Adding libraries for Kuchipudi and Odissi.
-* **AR/VR Classroom:** Creating an immersive virtual environment for remote learning.
+Mitanshu Shah - mitanshushah27@gmail.com
 
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
+Avinash Shinde - 23ce102@svitvasad.ac.in
 
----
-*Built with ❤️ for India's Cultural Heritage.*
+Nityam Patel - nityam05a@gmail.com
+
+Varun Patel - 23ce39@svitvasad.ac.in
+
+Umang Patel - umangpatel2415@gmail.com
+
+🔮 Future Scope
+
+Multilingual Translation: Implementing real-time translation of course content into regional Indian languages (Hindi, Tamil, Telugu, etc.) to make learning accessible to a wider audience.
+
+Diverse Dance Forms: Expanding the dataset and recognition models to support other Indian classical forms like Kuchipudi, Odissi, and Kathak.
