@@ -4,7 +4,6 @@
 **Problem Statement ID:** SIH25157  
 **Theme:** Smart Education  
 
-![Project Banner](https://images.unsplash.com/photo-1628102379326-7d0462939462?q=80&w=2070&auto=format&fit=crop)
 
 ## 📖 About The Project
 
@@ -79,12 +78,12 @@ This project is built using a robust and scalable technology stack:
 
 A huge shoutout to the team for their dedication and hard work in bringing this project to life!
 
-* **Riya Shahi** - *Project Lead & AI Model Optimization*
-* **Mitanshu Shah** - *Full Stack Development & Certification Logic*
-* **Avinash Shinde** - *Frontend Design & User Experience (UX)*
-* **Nityam Patel** - *Backend Architecture & Database Management*
-* **Varun Patel** - *Domain Research, Testing & Quality Assurance*
-* **Umang Patel** - *System Integration & Real-time Performance Tuning*
+* **Riya Shahi** 
+* **Mitanshu Shah** 
+* **Avinash Shinde** 
+* **Nityam Patel** 
+* **Varun Patel** 
+* **Umang Patel** 
 
 ## 🔮 Future Scope
 * **Full Body Posture Correction:** Expanding computer vision to track body alignment (*Adavus*).
